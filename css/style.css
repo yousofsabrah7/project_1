@@ -574,10 +574,21 @@ body {
         .sec::after {
             position: absolute;
             content: "";
-            height: 0;
+            height: 50%;
             width: 0;
             right: 0;
             top: 0;
+            background-color: #222;
+            opacity: 0.4;
+            z-index: -1;
+        }
+        .sec::before {
+            position: absolute;
+            content: "";
+            height: 50%;
+            width: 0;
+            left: 0;
+            bottom: 0;
             background-color: #222;
             opacity: 0.4;
             z-index: -1;
@@ -586,7 +597,12 @@ body {
         .sec:hover::after {
             transition: 1.5s;
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
+        }
+        .sec:hover::before {
+            transition: 1.5s;
+            width: 100%;
+            /* height: 100%; */
         }
 
     }
@@ -743,7 +759,7 @@ body {
                 content: "";
                 position: absolute;
                 left: 0;
-                bottom: -10px;
+                bottom: -8px;
                 width: 0;
                 height: 4px;
                 background-color: #222;
@@ -1041,13 +1057,15 @@ body {
     background-attachment: fixed;
     margin-top: 470px;
     position: relative;
+    z-index: 0;
 
     .content {
-        height: 400px;
+        height: 300px;
         background-color: transparent;
         text-align: center;
         color: #D4AF37;
         position: relative;
+        z-index: 2;
 
         .child {
             width: 30%;
@@ -1102,13 +1120,14 @@ body {
     top: 0;
     left: 0;
     background-color: #2a2a2aaa;
-    z-index: -1;
+    z-index: 1;
 }
 /* start our team */
 .our-team {
     background-color: #333;
     height: 110vh;
     padding-top: 200px;
+    margin-top: 250px;
 
     .our-team-container {
         width: 90%;
@@ -1124,45 +1143,46 @@ body {
             margin-left: 7%;
             border-radius: 10px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .our-team-div::after {
             position: absolute;
             content: "";
-            width: 100%;
+            width: 50%;
             height: 0;
             top: 0;
             left: 0;
             background-color: #000000;
             opacity: 1;
-            border-radius: 10px;
-            z-index: -1;
+            /* border-radius: 10px; */
+            /* z-index: -1; */
         }
 
         .our-team-div::before {
             position: absolute;
             content: "";
-            width: 100%;
+            width: 50%;
             height: 0;
             bottom: 0;
-            left: 0;
+            right: 0;
             background-color: #000000;
             opacity: 1;
-            border-radius: 10px;
-            z-index: -1;
+            /* border-radius: 10px; */
+            z-index: 1;
+            
         }
 
         .our-team-div:hover::after {
-            opacity: 0;
+            opacity: 0.5;
             height: 100%;
-            transition: 2s;
+            transition: 1.5s;
         }
 
         .our-team-div:hover::before {
-            opacity: 0;
+            opacity: 0.5;
             height: 100%;
-            transition: 2s;
+            transition: 1.5s;
         }
 
         .our-team-div:hover .font {
@@ -1189,6 +1209,7 @@ body {
                     font-size: 2rem;
                     color: #000000;
                     background-color: #D4AF37;
+                    z-index: 2;
                 }
 
                 i:hover {
@@ -1224,7 +1245,7 @@ body {
     background-color: #333;
     height: 100vh;
     padding-top: 50px;
-    margin-top: 470px;
+    margin-top: 620px;
 
     .recent-container {
         width: 90%;
@@ -1319,15 +1340,15 @@ body {
         }
 
         .person1 {
-            background-image: url(../images/سمير\ مصطفى.jpg);
+            background-image: url(../images/تجويد.jpg);
         }
 
         .person2 {
-            background-image: url(../images/محمود\ شعبان.jpg);
+            background-image: url(../images/online-quran.jpg);
         }
 
         .person3 {
-            background-image: url(../images/ياسر\ الدوسري.jpg);
+            background-image: url(../images/حافظ.jpg);
         }
 
         h2 {
